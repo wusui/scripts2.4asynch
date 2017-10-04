@@ -1,0 +1,19 @@
+#! /bin/bash -f
+#
+# Global definitions.
+#
+# Set to null by default so previous values set do not
+# affect the code.
+#
+# subscrname and subscrpassword are the only parameters
+# here that need to be set by the user
+#
+export usethisdistro=
+export useanotherrhelversion=
+export goodmachines=
+export rgwuid=
+export rgwdisplayname=
+export rgwemail=
+export octoname=
+export subscrname=
+export subscrpassword=
