@@ -34,11 +34,5 @@ sed -i 's/^#copy_admin_key:.*/copy_admin_key: true/' rgws.yml
 sed -i 's/^#ceph_rgw_civetweb_port:.*/ceph_rgw_civetweb_port: 80/' rgws.yml
 cd ..
 ansible-playbook site.yml
-ed /etc/ceph/ceph.conf <<EOF
-g/:8080/s//:80/
-.
-w
-q
-EOF
 systemctl stop ceph-radosgw@rgw.`hostname -s`
 systemctl start ceph-radosgw@rgw.`hostname -s`
