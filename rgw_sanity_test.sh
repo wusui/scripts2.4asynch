@@ -9,6 +9,7 @@ octo_name=${octoname:-'wusui'}
 rgw_uid=${rgwuid:-'tester'}
 rgw_display_name=${rgwdisplayname:-'Tester'}
 rgw_email=${rgwemail:-'foo@redhat.com'}
+systemctl restart ceph-radosgw@rgw.`hostname -s`
 cd ~
 cp /tmp/bucket_test.py .
 cp /tmp/get_connection.py .

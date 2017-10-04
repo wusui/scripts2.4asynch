@@ -34,5 +34,4 @@ sed -i 's/^#copy_admin_key:.*/copy_admin_key: true/' rgws.yml
 sed -i 's/^#ceph_rgw_civetweb_port:.*/ceph_rgw_civetweb_port: 80/' rgws.yml
 cd ..
 ansible-playbook site.yml
-systemctl stop ceph-radosgw@rgw.`hostname -s`
-systemctl start ceph-radosgw@rgw.`hostname -s`
+systemctl restart ceph-radosgw@rgw.`hostname -s`
