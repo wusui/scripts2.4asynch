@@ -35,7 +35,7 @@ sed -i 's,^#cluster_network:.*,cluster_network: 10.8.128.0/21,' all.yml
 sed -i 's,^#generate_fsid:.*,generate_fsid: true,' all.yml
 sed -i "s,^#fsid:.*,fsid: ${newfsid}," all.yml
 sed -i "s,^#monitor_interface:.*,monitor_interface: ${monintf}," all.yml
-sed -i "s,8080,80," all.yml
+sed -i "s/^#radosgw_civetweb_port: 8080/radosgw_civetweb_port: 80/" all.yml
 cp mons.yml.sample mons.yml
 cp osds.yml.sample osds.yml
 sed -i "s/^#journal_collocation:.*/journal_collocation: true/" osds.yml
