@@ -3,9 +3,6 @@
 # Do the ansible installs of the client and rgw nodes.
 #
 source /tmp/globaldefs.sh
-for i in $*; do
-    ssh $i pip install boto
-done
 node_files=`mktemp`
 touch $node_files
 echo '[clients]' >> $node_files

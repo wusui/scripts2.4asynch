@@ -9,6 +9,10 @@ octo_name=${octoname:-'wusui'}
 rgw_uid=${rgwuid:-'tester'}
 rgw_display_name=${rgwdisplayname:-'Tester'}
 rgw_email=${rgwemail:-'foo@redhat.com'}
+yum-config-manager --enable epel
+yum install python-pip -y
+yum-config-manager --disable epel
+pip install boto
 systemctl restart ceph-radosgw@rgw.`hostname -s`
 cd ~
 cp /tmp/bucket_test.py .
