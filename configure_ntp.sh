@@ -2,7 +2,13 @@
 #
 # make sure the ntp daemon is running on each site.
 #
-yum install ntp -y
+ostype=`lsb_release -si`
+if [ $ostype == 'Ubuntu' ]; then
+   lcmd='apt-get'
+else
+   lcmd='yum'
+fi
+${lcmd} install ntp -y
 systemctl enable ntpd
 systemctl start ntpd
 systemctl status ntpd

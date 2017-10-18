@@ -11,4 +11,4 @@ The following are commands that can be run from this directory.
 * rgw_sanity_test.sh -- test s3 basics on the site specified
 
 Note globaldefs.sh.sample must be moved to globaldefs.sh, and subscrname and subscrpassword need to be set.
-
+
